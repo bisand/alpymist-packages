@@ -1,0 +1,10 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>Alpymist packages</title>
+<style>body{font:16px/1.5 system-ui,sans-serif;max-width:40rem;margin:3rem auto;padding:0 1rem;background:#0b121e;color:#eaf0f6}code,pre{font-family:"Fira Mono",monospace}pre{background:#070c14;padding:1rem;overflow-x:auto}a{color:#7fb8d9}</style>
+<h1>Alpymist packages</h1>
+<p>The apk repository for <a href="https://alpymist.org">Alpymist</a>. Installed systems already use it. On another Alpine machine:</p>
+<pre>doas wget -O /etc/apk/keys/alpymist-2026.rsa.pub https://pkgs.alpymist.org/alpymist-2026.rsa.pub
+echo https://pkgs.alpymist.org/v3.24/alpymist | doas tee -a /etc/apk/repositories
+doas apk update</pre>
+<p>Only the index is signed, by hand, with a key CI never sees; it pins every package's hash. Check the key's fingerprint against the source repository before trusting it.</p>
